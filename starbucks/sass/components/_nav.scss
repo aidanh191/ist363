@@ -1,0 +1,50 @@
+@use '../abstracts/vars';
+@use '../abstracts/mixins';
+
+.nav-primary {
+    //background-color: yellow;
+    display:none;
+    @include mixins.breakpoint(laptop){
+        display:block;    
+    }
+    ul {
+        height: 100%;
+        //background-color: rgb(48, 71, 37);
+        display: flex;
+        align-items: center;
+        li {
+            a {
+                font-family: vars.$font_primary;
+                font-weight: bold;
+                color: black;
+                text-transform: uppercase;
+                font-style: italic;
+                font-size: 1rem;
+                text-decoration: none;
+                padding: 1rem;
+                letter-spacing: 1px;
+                &:hover {
+                    color: vars.$color_green;
+                }
+            }
+        }
+
+    }
+}
+
+.nav-mobile {
+    ul {
+        li {
+            a {
+                font-family: vars.$font_primary;
+                font-size: 1rem;
+                font-weight: bold;
+                color: white;
+                text-decoration: none;
+                padding: 1rem;
+                text-align: center;
+                display: block;
+            }
+        }
+    }
+}

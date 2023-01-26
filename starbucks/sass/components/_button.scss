@@ -1,0 +1,37 @@
+@use '../abstracts/vars';
+
+.btn {
+    padding: .5rem 1rem;
+    font-family: vars.$font_primary;
+    border-radius: 500px;
+    text-decoration: none;
+    border: 1px solid black;
+    font-weight: bold;
+    &--primary {
+        background-color: black;
+    }
+    &--secondary {
+        background-color: white;
+    }
+    &.active{
+        background-color: black;
+        color: white;
+    }
+    &.ml-1 {
+        margin-left: 1rem;
+    }
+}
+
+.btn-ui{
+    
+    img{
+        width: 2rem;
+        height: auto;
+    }
+    &#closeBtn{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        
+    }
+}

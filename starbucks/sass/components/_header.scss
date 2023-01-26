@@ -1,0 +1,19 @@
+@use '../abstracts/vars';
+@use '../abstracts/mixins';
+
+header {
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    border-bottom: 1px solid vars.$color_lightgrey;
+    .header-right{
+        display: none;
+        @include mixins.breakpoint(laptop){
+            display: block;
+        }
+    }
+    #menuBtn {
+        @include mixins.breakpoint(laptop){
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,99 @@
+@use '../abstracts/mixins';
+
+#showcase {
+    width: 600px;
+    height: 600px;
+    background-color: lightgray;
+    transition: all .5s;
+    position: relative;
+    h3 {
+        font-size: 3rem;
+        font-weight: bold;
+        color: white;
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+    }
+}
+
+
+#buttonsContainer{
+    margin-top: 1rem;
+}
+
+.carContainer{
+    width: 100%;
+    margin: 0 auto;
+    @include mixins.breakpoint(tablet){
+        width: 700px
+    }
+}
+
+.subaruBody{
+    background-color: white;
+    text-align: center;
+    .arrow{
+        width: 2rem;
+        height: 2rem;
+        border: 0;
+        background-color: teal;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        transform: translateY(-50%);
+        &.left {
+            left: 0;
+        }
+        &.right {
+            right: 0;
+        }
+    }
+}
+
+#showcaseSub {
+    width: 100%;
+    background-color: lightgray;
+    transition: all .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
+        bottom: 1rem;
+        left: 1rem;
+        text-align: center;
+    };
+    
+    
+}
+
+#buttonsContainerSub{
+    margin-top: 1rem;
+    background-color: grey;
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: center;
+    border-top: 1px solid black;
+
+    .swatch{
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+        margin: .75rem;
+        border: none;
+        cursor: pointer;
+        &.active{
+            border: .1rem solid white;
+            height: 2.25rem;
+            width: 2.25rem;
+        }
+    }
+    
+}
